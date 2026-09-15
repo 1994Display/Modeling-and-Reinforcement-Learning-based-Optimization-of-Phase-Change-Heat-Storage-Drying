@@ -1,0 +1,4670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contractReview xmlns="http://schemas.wps.cn/vas-ai-hub/contract-review">
+  
+ 
+  <reviewItems>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>db8ba9c5-a962-484c-ba2e-eb46ae7bb94e</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>43967365</paraID>
+      
+   
+      <start>7</start>
+      
+   
+      <end>8</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>55fec0da-e72e-4dec-82d8-db3da5b58425</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>43967365</paraID>
+      
+   
+      <start>25</start>
+      
+   
+      <end>26</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>61c4bbe1-a3f5-4351-b059-c95daca86b04</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>43967365</paraID>
+      
+   
+      <start>26</start>
+      
+   
+      <end>27</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>2de514cd-11a8-439d-a37a-2ceeb56f87da</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>43967365</paraID>
+      
+   
+      <start>27</start>
+      
+   
+      <end>28</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>5133e798-ab64-407c-a4e8-a3ceb9bed498</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>(</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> B9AD079</paraID>
+      
+   
+      <start>7</start>
+      
+   
+      <end>8</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>(</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>bf81159e-a101-4a27-be95-a6546217dfe9</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>)</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> B9AD079</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>14</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>)</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>12a07b9d-ee27-4597-831f-44bb5707c969</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>6279EF58</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>14</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>a917dac8-9076-4dd5-a35e-fe9cebab857e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>32A699CC</paraID>
+      
+   
+      <start>17</start>
+      
+   
+      <end>18</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>1292cf25-bc34-4418-a511-690da76df1db</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>17BEAF0A</paraID>
+      
+   
+      <start>14</start>
+      
+   
+      <end>15</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>2544a27f-ced6-4986-b12a-974085a30c54</errorID>
+      
+   
+      <errorWord>:</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>：</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>17BEAF0A</paraID>
+      
+   
+      <start>54</start>
+      
+   
+      <end>55</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>：</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>10e614b6-eaec-4bfd-adfd-a6a4b1a8e1c1</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>23E10635</paraID>
+      
+   
+      <start>21</start>
+      
+   
+      <end>22</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>56f22c92-b6bb-4435-ae76-86513b6566e3</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>38744582</paraID>
+      
+   
+      <start>19</start>
+      
+   
+      <end>20</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>45153d68-b177-4d9c-9ec3-754caa319273</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>3D4649D9</paraID>
+      
+   
+      <start>22</start>
+      
+   
+      <end>23</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>c1c0b391-a6ae-48a2-9b9b-0fb6700b2d99</errorID>
+      
+   
+      <errorWord>&quot;光照最弱者=放热集热器&quot;</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;光照最弱者=放热集热器&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID>3D4649D9</paraID>
+      
+   
+      <start>40</start>
+      
+   
+      <end>53</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;光照最弱者=放热集热器&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>69f4f579-4273-4ce4-aaec-b4e1ec9eb977</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>24CF77D2</paraID>
+      
+   
+      <start>16</start>
+      
+   
+      <end>17</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>2dd5c9a2-d315-4c95-bcbc-e56a476d607e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>7D49058E</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>14</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>0d854199-6108-4f88-b4cc-3b88e770fdd7</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>57EDDAD4</paraID>
+      
+   
+      <start>16</start>
+      
+   
+      <end>17</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>d3e6f440-2c64-4780-9c3b-90108d33fdd6</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>29CFF6FD</paraID>
+      
+   
+      <start>25</start>
+      
+   
+      <end>26</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>04425f26-1bc1-4c83-aa5f-9a6acb50d56d</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>614A8E21</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>14</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>5f3a06ee-c0aa-40ca-b412-323bb2bfa662</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>3FB6EB95</paraID>
+      
+   
+      <start>16</start>
+      
+   
+      <end>17</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>8d568899-e42c-4747-851a-f68b796a0b3b</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>5029DB5F</paraID>
+      
+   
+      <start>15</start>
+      
+   
+      <end>16</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>be030a07-876f-48a1-aa20-de368af8ad97</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>748BCF8E</paraID>
+      
+   
+      <start>21</start>
+      
+   
+      <end>22</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>5b9d06e5-03fa-4b80-89f9-628a0c87a2c7</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>2C7C598B</paraID>
+      
+   
+      <start>6</start>
+      
+   
+      <end>7</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>16ed051d-bbed-4347-808d-ec205d96c276</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>2C7C598B</paraID>
+      
+   
+      <start>11</start>
+      
+   
+      <end>12</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>5ceaff3a-bf51-46cd-86a8-5fcb29977a0e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>2C7C598B</paraID>
+      
+   
+      <start>12</start>
+      
+   
+      <end>13</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>c8e406cd-83c4-4c0d-9b8a-60443a61de00</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID>2C7C598B</paraID>
+      
+   
+      <start>29</start>
+      
+   
+      <end>30</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>c282e4a5-9c1a-47dc-9d9f-324d9dccfc1d</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>76E28877</paraID>
+      
+   
+      <start>12</start>
+      
+   
+      <end>13</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>9562f673-0877-4529-990b-4af4cef108e7</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>76E28877</paraID>
+      
+   
+      <start>42</start>
+      
+   
+      <end>43</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>ab8f120f-096a-4516-afd5-45d208cc73c5</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>76E28877</paraID>
+      
+   
+      <start>56</start>
+      
+   
+      <end>57</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>93e7d171-2526-4ea5-b36e-ad9467fc2d12</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>3799E639</paraID>
+      
+   
+      <start>40</start>
+      
+   
+      <end>41</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>7870a9bf-3fc7-48c3-aafe-86abe7e494f1</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>（</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>39A2E68C</paraID>
+      
+   
+      <start>24</start>
+      
+   
+      <end>25</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>（</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>2539f63f-0a7e-4302-9177-b70b63d6265a</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>39A2E68C</paraID>
+      
+   
+      <start>36</start>
+      
+   
+      <end>37</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>02ab3a6d-b104-4ae1-b671-bb653e6f0e1d</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>（</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>47900952</paraID>
+      
+   
+      <start>7</start>
+      
+   
+      <end>8</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>（</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>85521f4a-8cfa-440b-a767-67f7859a54b3</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 7255EAC</paraID>
+      
+   
+      <start>4</start>
+      
+   
+      <end>5</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>8f9ed047-3240-4e27-8531-5a65b64e915d</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 7255EAC</paraID>
+      
+   
+      <start>16</start>
+      
+   
+      <end>17</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>8cee961f-0721-4f95-ac35-964e02682dc0</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 50FA4EA</paraID>
+      
+   
+      <start>21</start>
+      
+   
+      <end>22</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>0da4bbbe-d5d4-4523-a55f-81599247b28f</errorID>
+      
+   
+      <errorWord>&quot;风机功率信号&quot;</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;风机功率信号&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 50FA4EA</paraID>
+      
+   
+      <start>64</start>
+      
+   
+      <end>72</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;风机功率信号&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>d6435301-395b-485d-98da-3a7b4f7313ed</errorID>
+      
+   
+      <errorWord>-</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>－</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>4C30F503</paraID>
+      
+   
+      <start>0</start>
+      
+   
+      <end>1</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>－</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>4277d279-aadb-4b59-b9a8-d95393e47639</errorID>
+      
+   
+      <errorWord>-</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>－</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>408BF231</paraID>
+      
+   
+      <start>0</start>
+      
+   
+      <end>1</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>－</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>589daaf5-4dc7-49aa-a80f-708cd1532369</errorID>
+      
+   
+      <errorWord>-</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>－</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>794604C3</paraID>
+      
+   
+      <start>0</start>
+      
+   
+      <end>1</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>－</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>1ab67c90-d46b-40a6-a360-ade7bdd60a11</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>6B625823</paraID>
+      
+   
+      <start>61</start>
+      
+   
+      <end>62</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>3e8080b2-07bd-4d0c-bc19-8da8ff3b0d8f</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>6B625823</paraID>
+      
+   
+      <start>68</start>
+      
+   
+      <end>69</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>59299b3d-de37-4ad3-94c4-3acdcba74367</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>47A7EA0F</paraID>
+      
+   
+      <start>5</start>
+      
+   
+      <end>6</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>d3c931bc-d039-4090-851c-e377a9dfaae9</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>47A7EA0F</paraID>
+      
+   
+      <start>10</start>
+      
+   
+      <end>11</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>dcdbf354-8a81-41b7-a08a-bf41d851920e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>75DF80D7</paraID>
+      
+   
+      <start>17</start>
+      
+   
+      <end>18</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>b27c0226-3f61-4767-a47a-f81763cc5623</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>(</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>40A15590</paraID>
+      
+   
+      <start>21</start>
+      
+   
+      <end>22</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>(</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>56bb1784-3a13-4f7b-8c84-86178adf3474</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>)</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>40A15590</paraID>
+      
+   
+      <start>27</start>
+      
+   
+      <end>28</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>)</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>5f9267a2-a236-4996-a1de-dfd1790a2234</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>(</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>517DCDCE</paraID>
+      
+   
+      <start>9</start>
+      
+   
+      <end>10</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>(</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>1471f2ba-ca96-4237-b146-abfb342822e2</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>)</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>517DCDCE</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>14</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>)</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>29e17c53-ee9a-4268-8c37-fdea076a7866</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>(</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>34F3815E</paraID>
+      
+   
+      <start>10</start>
+      
+   
+      <end>11</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>(</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>1791d8f5-c5c8-418e-a839-dafe03990051</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>)</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>34F3815E</paraID>
+      
+   
+      <start>14</start>
+      
+   
+      <end>15</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>)</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>355f8112-2694-4b3f-b9e3-0ed161bdf263</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>(</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>1945DC39</paraID>
+      
+   
+      <start>4</start>
+      
+   
+      <end>5</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>(</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>80bd3dc2-3f9e-4fe6-8c95-4cf34582144a</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>)</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>1945DC39</paraID>
+      
+   
+      <start>20</start>
+      
+   
+      <end>21</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>)</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>3ca6bf6d-8be0-44ed-a041-04b427738e23</errorID>
+      
+   
+      <errorWord>512KBSRAM</errorWord>
+      
+   
+      <group>L1_Word</group>
+      
+   
+      <groupName>字词问题</groupName>
+      
+   
+      <ability>L2_Typo</ability>
+      
+   
+      <abilityName>字词错误</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>512KB SRAM</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> E54BD79</paraID>
+      
+   
+      <start>13</start>
+      
+   
+      <end>23</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>512KB SRAM</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>54589d99-a290-442e-8f84-578ea9cb188a</errorID>
+      
+   
+      <errorWord>8MBPSRAM</errorWord>
+      
+   
+      <group>L1_Word</group>
+      
+   
+      <groupName>字词问题</groupName>
+      
+   
+      <ability>L2_Typo</ability>
+      
+   
+      <abilityName>字词错误</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>8MB PSRAM</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> E54BD79</paraID>
+      
+   
+      <start>24</start>
+      
+   
+      <end>33</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>8MB PSRAM</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>4844a094-1b7d-4971-9da7-defae21e4444</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201C;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>32C56D5A</paraID>
+      
+   
+      <start>31</start>
+      
+   
+      <end>32</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201C;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>08cd7ebb-51b1-49fa-8538-e433594db078</errorID>
+      
+   
+      <errorWord>&quot;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&#x201D;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID>32C56D5A</paraID>
+      
+   
+      <start>43</start>
+      
+   
+      <end>44</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&#x201D;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>59d06233-732e-43e4-b361-c8e3d856b5fa</errorID>
+      
+   
+      <errorWord>控</errorWord>
+      
+   
+      <group>L1_Word</group>
+      
+   
+      <groupName>字词问题</groupName>
+      
+   
+      <ability>L2_Typo</ability>
+      
+   
+      <abilityName>字词错误</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>控制</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> D3EE0D5</paraID>
+      
+   
+      <start>63</start>
+      
+   
+      <end>65</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>控制</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>674025c3-8e61-46b0-8e60-727006254593</errorID>
+      
+   
+      <errorWord>WiFi</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>Wi-Fi</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>14</start>
+      
+   
+      <end>19</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>Wi-Fi</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>98651d46-0e52-4bf3-ae8f-5b52b929797b</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>20</start>
+      
+   
+      <end>21</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>e2a80bcc-e7b2-4b4a-b19e-bada72535d3b</errorID>
+      
+   
+      <errorWord>WiFi</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>Wi-Fi</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>23</start>
+      
+   
+      <end>28</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>Wi-Fi</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>2d93ae2b-f69c-4213-9b40-9bce0e864809</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>41</start>
+      
+   
+      <end>42</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>e675e3e4-1deb-4ffa-a097-9e8f6a8a71cc</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>55</start>
+      
+   
+      <end>56</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>712c8edd-7bc9-4837-a8f9-dea44e278d15</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>61</start>
+      
+   
+      <end>62</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>b625356d-26b8-4e68-a3cf-456474a8309d</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E10002</paraID>
+      
+   
+      <start>62</start>
+      
+   
+      <end>63</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>0c7c3ad6-fecf-4828-84a2-fa45af125f5a</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10003</paraID>
+      
+   
+      <start>26</start>
+      
+   
+      <end>27</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>cc822555-be13-45bb-bc50-09ebc04ee695</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10004</paraID>
+      
+   
+      <start>26</start>
+      
+   
+      <end>27</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>bc9968bb-3c16-47f8-86b9-de880b972a2e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10005</paraID>
+      
+   
+      <start>23</start>
+      
+   
+      <end>24</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>8210d7b8-050a-437a-8c84-a3d236ea6601</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10006</paraID>
+      
+   
+      <start>23</start>
+      
+   
+      <end>24</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>651f1cb0-2197-4dea-b15f-145b01b3fcaf</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10008</paraID>
+      
+   
+      <start>19</start>
+      
+   
+      <end>20</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>cf215942-6f2e-4aaf-a203-5c09c2349d0e</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E1000A</paraID>
+      
+   
+      <start>24</start>
+      
+   
+      <end>25</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>81473b1e-f75c-41bb-9f91-e8283cec10f5</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E1000A</paraID>
+      
+   
+      <start>58</start>
+      
+   
+      <end>59</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>49586966-bc56-4791-a19b-21de119afef9</errorID>
+      
+   
+      <errorWord>WiFi</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>Wi-Fi</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>2</start>
+      
+   
+      <end>7</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>Wi-Fi</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>d7fa3f53-8071-4789-a4b7-24dc0c3cd70d</errorID>
+      
+   
+      <errorWord>（</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>23</start>
+      
+   
+      <end>24</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>b85114ad-27ed-44b9-836a-9578446e2afe</errorID>
+      
+   
+      <errorWord>(</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>41</start>
+      
+   
+      <end>42</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>be2aa879-85c5-4b99-8cda-b7ba0c8481ff</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>42</start>
+      
+   
+      <end>43</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>ccd4d5bf-757a-4e62-81ce-cb06ada3f83d</errorID>
+      
+   
+      <errorWord>）</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList/>
+      
+   
+      <explain>同一形式括号套用。</explain>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>43</start>
+      
+   
+      <end>44</end>
+      
+   
+      <status>unmodified</status>
+      
+   
+      <modifiedWord/>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>e2ba979d-7bad-4b4b-a4dd-c1788f473c66</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E1000B</paraID>
+      
+   
+      <start>70</start>
+      
+   
+      <end>71</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>9d1e305b-b997-40a3-a17e-9094108d0461</errorID>
+      
+   
+      <errorWord>&gt;:</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>&gt;</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 1E1000C</paraID>
+      
+   
+      <start>19</start>
+      
+   
+      <end>20</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>&gt;</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>21370ef2-96a7-4699-868d-a815631ae25b</errorID>
+      
+   
+      <errorWord>WiFi</errorWord>
+      
+   
+      <group>L1_Punc</group>
+      
+   
+      <groupName>标点问题</groupName>
+      
+   
+      <ability>L2_Punc_CN</ability>
+      
+   
+      <abilityName>标点符号问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>Wi-Fi</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain/>
+      
+   
+      <paraID> 1E1000D</paraID>
+      
+   
+      <start>34</start>
+      
+   
+      <end>39</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>Wi-Fi</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>d527c565-c4f8-42e9-be5e-20aa5a2c2938</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E1000E</paraID>
+      
+   
+      <start>23</start>
+      
+   
+      <end>24</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>7e2ef033-63d5-4e22-afed-a99e84ef7e5a</errorID>
+      
+   
+      <errorWord>:</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>：</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>65</start>
+      
+   
+      <end>66</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>：</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>814e97cc-c7ce-4947-92e0-2d78ddd154bf</errorID>
+      
+   
+      <errorWord>;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>；</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>68</start>
+      
+   
+      <end>69</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>；</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>e165553f-fc06-4cbe-a252-8ee860d9599d</errorID>
+      
+   
+      <errorWord>;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>；</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>71</start>
+      
+   
+      <end>72</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>；</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>aa249c40-9fcb-4f12-9f33-962446cc2556</errorID>
+      
+   
+      <errorWord>;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>；</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>75</start>
+      
+   
+      <end>76</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>；</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>aa6a4adb-4af5-4a0d-8b61-496c7044f012</errorID>
+      
+   
+      <errorWord>;</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>；</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>80</start>
+      
+   
+      <end>81</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>；</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>c943540e-bd9c-4eb3-b0ac-b18a479a8105</errorID>
+      
+   
+      <errorWord>:</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>：</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10012</paraID>
+      
+   
+      <start>108</start>
+      
+   
+      <end>109</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>：</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+  
+    <reviewItem>
+      
+   
+      <errorID>f1b448f9-8917-435a-9edc-03be99843612</errorID>
+      
+   
+      <errorWord>)</errorWord>
+      
+   
+      <group>L1_Format</group>
+      
+   
+      <groupName>格式问题</groupName>
+      
+   
+      <ability>L2_HalfPunc_CN</ability>
+      
+   
+      <abilityName>全半角问题</abilityName>
+      
+   
+      <candidateList>
+        
+    
+        <item>）</item>
+        
+   
+      </candidateList>
+      
+   
+      <explain>文本全半角错误。</explain>
+      
+   
+      <paraID> 1E10013</paraID>
+      
+   
+      <start>27</start>
+      
+   
+      <end>28</end>
+      
+   
+      <status>modified</status>
+      
+   
+      <modifiedWord>）</modifiedWord>
+      
+   
+      <trackRevisions>false</trackRevisions>
+      
+  
+    </reviewItem>
+    
+ 
+  </reviewItems>
+  
+ 
+  <config/>
+  
+
+</contractReview>

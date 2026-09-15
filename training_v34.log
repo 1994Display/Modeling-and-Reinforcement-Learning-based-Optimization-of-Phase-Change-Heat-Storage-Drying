@@ -1,0 +1,89 @@
+============================================================
+v34: 训练 PPO（新增加热片，动作 5 维）
+============================================================
+Step   10000 | Avg Reward (last 10):  4515.43 | σ=0.2165 | Episodes: 16
+  → 保存最优模型 (avg reward: 4515.43)
+Step   20000 | Avg Reward (last 10):  5032.96 | σ=0.2101 | Episodes: 33
+  → 保存最优模型 (avg reward: 5032.96)
+Step   30000 | Avg Reward (last 10):  5562.43 | σ=0.2040 | Episodes: 50
+  → 保存最优模型 (avg reward: 5562.43)
+Step   40000 | Avg Reward (last 10):  5660.38 | σ=0.1979 | Episodes: 66
+  → 保存最优模型 (avg reward: 5660.38)
+Step   50000 | Avg Reward (last 10):  7486.57 | σ=0.1920 | Episodes: 83
+  → 保存最优模型 (avg reward: 7486.57)
+Step   60000 | Avg Reward (last 10):  6617.73 | σ=0.1864 | Episodes: 100
+Step   70000 | Avg Reward (last 10):  6771.86 | σ=0.1809 | Episodes: 116
+Step   80000 | Avg Reward (last 10):  5924.92 | σ=0.1755 | Episodes: 133
+Step   90000 | Avg Reward (last 10):  6464.21 | σ=0.1703 | Episodes: 150
+Step  100000 | Avg Reward (last 10):  6645.91 | σ=0.1653 | Episodes: 166
+Step  110000 | Avg Reward (last 10):  7406.24 | σ=0.1604 | Episodes: 183
+Step  120000 | Avg Reward (last 10):  7795.26 | σ=0.1557 | Episodes: 200
+  → 保存最优模型 (avg reward: 7795.26)
+Step  130000 | Avg Reward (last 10):  8359.23 | σ=0.1511 | Episodes: 216
+  → 保存最优模型 (avg reward: 8359.23)
+Step  140000 | Avg Reward (last 10):  8292.13 | σ=0.1466 | Episodes: 233
+Step  150000 | Avg Reward (last 10):  8828.93 | σ=0.1423 | Episodes: 250
+  → 保存最优模型 (avg reward: 8828.93)
+Step  160000 | Avg Reward (last 10):  8158.54 | σ=0.1381 | Episodes: 267
+Step  170000 | Avg Reward (last 10):  9466.64 | σ=0.1340 | Episodes: 284
+  → 保存最优模型 (avg reward: 9466.64)
+Step  180000 | Avg Reward (last 10):  9085.00 | σ=0.1300 | Episodes: 304
+Step  190000 | Avg Reward (last 10):  9752.76 | σ=0.1262 | Episodes: 323
+  → 保存最优模型 (avg reward: 9752.76)
+Step  200000 | Avg Reward (last 10):  7444.26 | σ=0.1225 | Episodes: 343
+Step  210000 | Avg Reward (last 10):  4519.51 | σ=0.1188 | Episodes: 377
+Step  220000 | Avg Reward (last 10):  7275.59 | σ=0.1153 | Episodes: 400
+Step  230000 | Avg Reward (last 10):  6778.89 | σ=0.1119 | Episodes: 419
+Step  240000 | Avg Reward (last 10):  4725.53 | σ=0.1086 | Episodes: 449
+Step  250000 | Avg Reward (last 10):  8875.73 | σ=0.1054 | Episodes: 468
+Step  260000 | Avg Reward (last 10):  6198.30 | σ=0.1023 | Episodes: 495
+Step  270000 | Avg Reward (last 10):  9461.62 | σ=0.0993 | Episodes: 515
+Step  280000 | Avg Reward (last 10): 10665.29 | σ=0.0963 | Episodes: 532
+  → 保存最优模型 (avg reward: 10665.29)
+Step  290000 | Avg Reward (last 10):  9762.99 | σ=0.0935 | Episodes: 550
+Step  300000 | Avg Reward (last 10): 10177.75 | σ=0.0907 | Episodes: 566
+Step  310000 | Avg Reward (last 10): 10138.72 | σ=0.0880 | Episodes: 583
+Step  320000 | Avg Reward (last 10):  9533.28 | σ=0.0854 | Episodes: 600
+Step  330000 | Avg Reward (last 10):  8537.43 | σ=0.0829 | Episodes: 619
+Step  340000 | Avg Reward (last 10):  6175.40 | σ=0.0805 | Episodes: 647
+Step  350000 | Avg Reward (last 10):  5714.72 | σ=0.0781 | Episodes: 669
+Step  360000 | Avg Reward (last 10):  8228.39 | σ=0.0758 | Episodes: 689
+Step  370000 | Avg Reward (last 10):  4662.36 | σ=0.0735 | Episodes: 714
+Step  380000 | Avg Reward (last 10):  7905.36 | σ=0.0714 | Episodes: 734
+Step  390000 | Avg Reward (last 10):  6919.94 | σ=0.0693 | Episodes: 753
+Step  400000 | Avg Reward (last 10):  9086.22 | σ=0.0672 | Episodes: 775
+Step  410000 | Avg Reward (last 10):  2345.15 | σ=0.0652 | Episodes: 808
+Step  420000 | Avg Reward (last 10):  3748.48 | σ=0.0633 | Episodes: 868
+Step  430000 | Avg Reward (last 10):  5958.45 | σ=0.0614 | Episodes: 901
+
+  [Early Stop] 150000 steps no improve, peak 10665.29
+
+训练完成！总步数: 500000, 总 episode: 901
+
+导出 ONNX 模型...
+ONNX 模型已导出至: policy.onnx
+
+转换 TFLite + 生成 C 头文件...
+[1/4] Loading PyTorch model...
+  Loaded: policy_best.pt
+[2/4] Extracting weights...
+[3/4] Building TF model (v33: 3-layer + LayerNorm)...
+Estimated count of arithmetic ops: 0.070 M  ops, equivalently 0.035 M  MACs
+[4/4] Saving TFLite model...
+
+TFLite model: policy.tflite
+  Size: 140.9 KB
+  Input: [1 7] (<class 'numpy.float32'>)
+  Output: [1 5] (<class 'numpy.float32'>)
+  PyTorch output:  [0.71281475 0.34889898 0.51989937 0.36178297 0.5510486 ]
+  TFLite output:   [0.7128147  0.34889895 0.5198993  0.36178294 0.5510486 ]
+  Max diff:        0.000000 [OK]
+C header generated: policy_model.h
+
+全部完成！
+输出文件:
+  - policy_best.pt   : PyTorch 最优模型 (5维动作)
+  - policy_final.pt  : PyTorch 最终模型
+  - policy.onnx      : ONNX 中间格式
+  - policy.tflite    : TFLite float32 模型
+  - policy_model.h   : C 头文件（供 ESP32 部署）

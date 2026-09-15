@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1580" viewBox="0 0 1100 1580" style="background:#ffffff">
+<defs>
+<style>
+text{font-family:"Microsoft YaHei",sans-serif}
+.t{fill:#0d6efd;font-weight:bold}
+.h{fill:#333;font-weight:bold}
+.b{fill:#333}
+.g{fill:#198754}
+.r{fill:#dc3545}
+.o{fill:#ff9800}
+.ln{stroke:#999;stroke-width:1.5}
+.box{fill:#f4f6f9;stroke:#333;stroke-width:1.5}
+.pin{fill:#fff;stroke:#0d6efd;stroke-width:1.2}
+</style>
+</defs>
+
+<text x="550" y="46" font-size="34" text-anchor="middle" class="t">相变材料光热干燥系统 · 元件接线表</text>
+<text x="550" y="78" font-size="18" text-anchor="middle" class="b">（依据 esp32_controller.ino / weather_display.ino 当前代码）</text>
+
+<!-- ============ 控制器 ============ -->
+<rect x="30" y="100" width="1000" height="720" rx="12" class="box" fill="#f0f7ff"/>
+<text x="50" y="135" font-size="26" class="t">控制器 ESP32-S3（esp32_controller）</text>
+
+<g font-size="17">
+<!-- 传感器 -->
+<text x="50" y="175" class="h">▌传感器</text>
+<text x="50" y="203" class="b">DHT11 环境温湿度</text><rect x="320" y="187" width="150" height="24" rx="12" class="pin"/><text x="395" y="204" font-size="15" text-anchor="middle" class="b">GPIO4</text>
+<text x="50" y="235" class="b">DS18B20 水温（4.7kΩ上拉）</text><rect x="320" y="219" width="150" height="24" rx="12" class="pin"/><text x="395" y="236" font-size="15" text-anchor="middle" class="b">GPIO18</text>
+<text x="50" y="267" class="b">BH1750 光照（I2C）</text><rect x="320" y="251" width="230" height="24" rx="12" class="pin"/><text x="435" y="268" font-size="15" text-anchor="middle" class="b">SDA=40 SCL=41</text>
+<text x="50" y="299" class="b">NPN 接近开关（转盘定位）</text><rect x="320" y="283" width="150" height="24" rx="12" class="pin"/><text x="395" y="300" font-size="15" text-anchor="middle" class="r">GPIO42</text>
+<text x="50" y="331" class="b">位置碰撞开关 YL-99（未用）</text><rect x="320" y="315" width="150" height="24" rx="12" class="pin"/><text x="395" y="332" font-size="15" text-anchor="middle" class="g">GPIO2</text>
+
+<!-- 执行器 -->
+<text x="50" y="372" class="h">▌执行器</text>
+<text x="50" y="400" class="b">风机1（维可思MOSFET）</text><rect x="320" y="384" width="150" height="24" rx="12" class="pin"/><text x="395" y="401" font-size="15" text-anchor="middle" class="b">GPIO8</text>
+<text x="50" y="432" class="b">风机2（CS25N06，同步）</text><rect x="320" y="416" width="150" height="24" rx="12" class="pin"/><text x="395" y="433" font-size="15" text-anchor="middle" class="b">GPIO21</text>
+<text x="50" y="464" class="b">水泵</text><rect x="320" y="448" width="150" height="24" rx="12" class="pin"/><text x="395" y="465" font-size="15" text-anchor="middle" class="b">GPIO6</text>
+<text x="50" y="496" class="b">加热片（MOS 高电平导通）</text><rect x="320" y="480" width="150" height="24" rx="12" class="pin"/><text x="395" y="497" font-size="15" text-anchor="middle" class="o">GPIO9</text>
+
+<!-- 舵机 -->
+<text x="50" y="537" class="h">▌舵机</text>
+<text x="50" y="565" class="b">风门舵机 MG90S</text><rect x="320" y="549" width="180" height="24" rx="12" class="pin"/><text x="410" y="566" font-size="15" text-anchor="middle" class="b">PCA9685 CH4</text>
+<text x="50" y="597" class="b">排粮舵机</text><rect x="320" y="581" width="180" height="24" rx="12" class="pin"/><text x="410" y="598" font-size="15" text-anchor="middle" class="b">PCA9685 CH5</text>
+<text x="50" y="629" class="b">进风口导轨舵机</text><rect x="320" y="613" width="150" height="24" rx="12" class="pin"/><text x="395" y="630" font-size="15" text-anchor="middle" class="b">GPIO7</text>
+<text x="50" y="661" class="b">出风口导轨舵机</text><rect x="320" y="645" width="150" height="24" rx="12" class="pin"/><text x="395" y="662" font-size="15" text-anchor="middle" class="b">GPIO10</text>
+
+<!-- 电机+限位 -->
+<text x="50" y="702" class="h">▌转盘电机（BTS7960）</text>
+<text x="50" y="730" class="b">RPWM 正转 / LPWM 反转</text><rect x="320" y="714" width="230" height="24" rx="12" class="pin"/><text x="435" y="731" font-size="15" text-anchor="middle" class="b">GPIO3 / GPIO1</text>
+<text x="50" y="762" class="b">导轨碰撞开关 1~4</text><rect x="320" y="746" width="300" height="24" rx="12" class="pin"/><text x="470" y="763" font-size="15" text-anchor="middle" class="b">38·37·47·48</text>
+<text x="50" y="790" class="g">注：38=出风口原点 37=出风口终点 47=进风口终点 48=进风口原点</text>
+</g>
+
+<!-- ============ 天气屏 ============ -->
+<rect x="30" y="850" width="1000" height="300" rx="12" class="box" fill="#f0fff4"/>
+<text x="50" y="885" font-size="26" class="t">天气屏 ESP32-S3（weather_display）</text>
+<g font-size="17">
+<text x="50" y="925" class="h">▌LCD 屏（ILI9341）</text>
+<rect x="320" y="909" width="430" height="24" rx="12" class="pin"/><text x="535" y="926" font-size="15" text-anchor="middle" class="b">MOSI=11 MISO=13 SCK=12 CS=10 DC=9 RST=14 BLK=21</text>
+<text x="50" y="957" class="h">▌BOOT 按键（手动刷新）</text><rect x="320" y="941" width="150" height="24" rx="12" class="pin"/><text x="395" y="958" font-size="15" text-anchor="middle" class="b">GPIO0</text>
+<text x="50" y="989" class="h">▌UART（连控制器）</text><rect x="320" y="973" width="230" height="24" rx="12" class="pin"/><text x="435" y="990" font-size="15" text-anchor="middle" class="b">TX=19 RX=20</text>
+<text x="50" y="1021" class="h">▌无线光照节点（C3）</text>
+<text x="320" y="1021" class="b">UDP 广播 :8266，格式 LUX1~4:数值</text>
+<text x="50" y="1053" class="g">注：天气屏每 2 秒将 4 路集热器光照经 UART 转发给控制器</text>
+</g>
+
+<!-- ============ 互联 ============ -->
+<rect x="30" y="1180" width="1000" height="160" rx="12" class="box" fill="#fffbe6"/>
+<text x="50" y="1215" font-size="26" class="t">两板 UART 互联（115200）</text>
+<g font-size="18" class="b">
+<text x="80" y="1255">天气屏 GPIO19(TX) ──────────▶ 控制器 GPIO19(RX)</text>
+<text x="80" y="1285">控制器 GPIO20(TX) ──────────▶ 天气屏 GPIO20(RX)</text>
+<text x="80" y="1315" class="r">GND ── 两板必须共地</text>
+</g>
+
+<!-- ============ 电源 ============ -->
+<rect x="30" y="1370" width="1000" height="180" rx="12" class="box" fill="#f4f6f9"/>
+<text x="50" y="1405" font-size="26" class="t">电源分配</text>
+<g font-size="18" class="b">
+<text x="80" y="1440" class="o">12V：风机驱动、转盘电机驱动、NPN 接近开关</text>
+<text x="80" y="1470">5V：水泵、舵机 V+（5~6V）</text>
+<text x="80" y="1500" class="g">3.3V：DHT11、DS18B20、BH1750、PCA9685 VCC、碰撞开关</text>
+</g>
+</svg>

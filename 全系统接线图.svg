@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1160" font-family="'Microsoft YaHei','SimHei','PingFang SC',sans-serif">
+  <rect width="1600" height="1160" fill="#f7f8fa"/>
+
+  <!-- ==================== 标题 ==================== -->
+  <text x="800" y="46" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a252f">粮食干燥系统 —— 全元器件接线图</text>
+  <text x="800" y="74" text-anchor="middle" font-size="14" fill="#7f8c8d">四块板卡：ESP32-S3 主控制器 + 天气屏 · ESP32-C3 光照节点(×4) + 温湿度节点</text>
+
+  <!-- ==================== 顶部：显示 / 驱动板 ==================== -->
+  <rect x="560" y="190" width="230" height="76" rx="8" fill="#8e44ad"/>
+  <text x="675" y="218" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">ILI9341 触摸屏</text>
+  <text x="675" y="238" text-anchor="middle" font-size="10" fill="#fff">SPI: CS5 DC16 RST17</text>
+  <text x="675" y="253" text-anchor="middle" font-size="10" fill="#fff">MOSI11 SCLK12 MISO13</text>
+
+  <rect x="810" y="190" width="230" height="76" rx="8" fill="#e67e22"/>
+  <text x="925" y="218" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">PCA9685 舵机板</text>
+  <text x="925" y="238" text-anchor="middle" font-size="10" fill="#fff">I2C 0x40 · SDA40 SCL41</text>
+  <text x="925" y="253" text-anchor="middle" font-size="10" fill="#fff">CH4 风门 · CH5 排粮</text>
+
+  <!-- ==================== 主控制器 ESP32-S3 ==================== -->
+  <rect x="560" y="290" width="480" height="290" rx="10" fill="#34495e"/>
+  <text x="800" y="318" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">主控制器  ESP32-S3-N16R8</text>
+  <text x="800" y="337" text-anchor="middle" font-size="11" fill="#bdc3c7">esp32_controller.ino</text>
+
+  <text x="578" y="362" font-size="11" font-weight="bold" fill="#f1c40f">传感输入</text>
+  <text x="578" y="380" font-size="11" fill="#fff">GPIO4 DHT11　　GPIO18 DS18B20</text>
+  <text x="578" y="398" font-size="11" fill="#fff">GPIO40/41 I2C (BH1750 + PCA9685)</text>
+
+  <text x="578" y="424" font-size="11" font-weight="bold" fill="#f1c40f">执行输出</text>
+  <text x="578" y="442" font-size="11" fill="#fff">GPIO8 风机1　GPIO21 风机2　GPIO6 水泵</text>
+  <text x="578" y="460" font-size="11" fill="#fff">GPIO9 加热片　GPIO3/1 IBT-2 电机</text>
+  <text x="578" y="478" font-size="11" fill="#fff">GPIO7 进导轨　GPIO10 出导轨</text>
+
+  <text x="578" y="504" font-size="11" font-weight="bold" fill="#f1c40f">开关 / 通信</text>
+  <text x="578" y="522" font-size="11" fill="#fff">GPIO2 碰撞　GPIO42 NPN接近</text>
+  <text x="578" y="540" font-size="11" fill="#fff">GPIO38/37/47/48 导轨限位开关</text>
+  <text x="578" y="558" font-size="11" fill="#fff">SPI(11/12/13/5/16/17) ILI9341</text>
+  <text x="578" y="576" font-size="11" fill="#fff">UART TX19 / RX20</text>
+
+  <!-- ==================== 左列：传感器 ==================== -->
+  <rect x="30" y="190" width="430" height="60" rx="8" fill="#27ae60"/>
+  <text x="245" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">DHT11 温湿度传感器</text>
+  <text x="245" y="234" text-anchor="middle" font-size="10" fill="#fff">DATA→GPIO4 · VCC 3.3V · GND</text>
+
+  <rect x="30" y="262" width="430" height="60" rx="8" fill="#27ae60"/>
+  <text x="245" y="286" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">DS18B20 水温传感器</text>
+  <text x="245" y="306" text-anchor="middle" font-size="10" fill="#fff">DQ→GPIO18（需 4.7kΩ 上拉）· VCC 3.3V</text>
+
+  <rect x="30" y="334" width="430" height="60" rx="8" fill="#e67e22"/>
+  <text x="245" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">BH1750 光照传感器</text>
+  <text x="245" y="378" text-anchor="middle" font-size="10" fill="#fff">SDA→GPIO40 · SCL→GPIO41 · 地址 0x23</text>
+
+  <rect x="30" y="406" width="430" height="60" rx="8" fill="#27ae60"/>
+  <text x="245" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">碰撞开关模块 (YL-99)</text>
+  <text x="245" y="450" text-anchor="middle" font-size="10" fill="#fff">OUT→GPIO2 · 无碰撞 HIGH / 有碰撞 LOW</text>
+
+  <rect x="30" y="478" width="430" height="60" rx="8" fill="#27ae60"/>
+  <text x="245" y="502" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">NPN 接近开关</text>
+  <text x="245" y="522" text-anchor="middle" font-size="10" fill="#fff">信号→GPIO42 · 棕12V · 蓝GND（共地）</text>
+
+  <rect x="30" y="550" width="430" height="60" rx="8" fill="#27ae60"/>
+  <text x="245" y="574" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">导轨碰撞开关 ×4</text>
+  <text x="245" y="594" text-anchor="middle" font-size="10" fill="#fff">GPIO38 出原点 · GPIO37 出终点 · GPIO47 进终点 · GPIO48 进原点</text>
+
+  <!-- ==================== 右列：执行器 ==================== -->
+  <rect x="1140" y="190" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">风机1（维可思 MOS）</text>
+  <text x="1355" y="233" text-anchor="middle" font-size="10" fill="#fff">SIG→GPIO8 · 12V · 0~100% PWM</text>
+
+  <rect x="1140" y="254" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">风机2（CS25N06 MOS）</text>
+  <text x="1355" y="297" text-anchor="middle" font-size="10" fill="#fff">SIG→GPIO21 · 与风机1 同步启停</text>
+
+  <rect x="1140" y="318" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="342" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">水泵</text>
+  <text x="1355" y="361" text-anchor="middle" font-size="10" fill="#fff">SIG→GPIO6 · 5V · PWM 调速</text>
+
+  <rect x="1140" y="382" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="406" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">加热片（MOS 驱动）</text>
+  <text x="1355" y="425" text-anchor="middle" font-size="10" fill="#fff">IO→GPIO9 · HIGH=加热 / LOW=关闭</text>
+
+  <rect x="1140" y="446" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="470" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">转盘直流电机（IBT-2 / BTS7960）</text>
+  <text x="1355" y="489" text-anchor="middle" font-size="10" fill="#fff">RPWM→GPIO3 · LPWM→GPIO1 · R/L_EN→5V · B+→12V</text>
+
+  <rect x="1140" y="510" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="534" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">进气管舵机（连续旋转）</text>
+  <text x="1355" y="553" text-anchor="middle" font-size="10" fill="#fff">SIG→GPIO7 · 5V（ESP32Servo 直驱）</text>
+
+  <rect x="1140" y="574" width="430" height="58" rx="8" fill="#2980b9"/>
+  <text x="1355" y="598" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">出气管舵机（连续旋转）</text>
+  <text x="1355" y="617" text-anchor="middle" font-size="10" fill="#fff">SIG→GPIO10 · 5V（ESP32Servo 直驱）</text>
+
+  <rect x="1140" y="638" width="430" height="58" rx="8" fill="#e67e22"/>
+  <text x="1355" y="662" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">风门舵机 MG90S</text>
+  <text x="1355" y="681" text-anchor="middle" font-size="10" fill="#fff">PCA9685 CH4 · 0°全干燥 / 45°半储热 / 90°全储热</text>
+
+  <rect x="1140" y="702" width="430" height="58" rx="8" fill="#e67e22"/>
+  <text x="1355" y="726" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">排粮舵机 MG90S</text>
+  <text x="1355" y="745" text-anchor="middle" font-size="10" fill="#fff">PCA9685 CH5 · 0°关闭 / 90°排粮</text>
+
+  <!-- ==================== 电源 ==================== -->
+  <rect x="30" y="660" width="100" height="50" rx="8" fill="#c0392b"/>
+  <text x="80" y="690" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">12V</text>
+  <rect x="140" y="660" width="100" height="50" rx="8" fill="#c0392b"/>
+  <text x="190" y="690" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">5V</text>
+  <rect x="250" y="660" width="100" height="50" rx="8" fill="#c0392b"/>
+  <text x="300" y="690" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">3.3V</text>
+  <rect x="360" y="660" width="100" height="50" rx="8" fill="#c0392b"/>
+  <text x="410" y="690" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">GND</text>
+  <text x="245" y="646" text-anchor="middle" font-size="10" fill="#7f8c8d">12V→风机/IBT-2 · 5V→水泵/舵机/PCA9685 · 3.3V→传感器 · 全系统 GND 共地</text>
+
+  <!-- ==================== 底部：三块从板 ==================== -->
+  <rect x="560" y="820" width="480" height="210" rx="10" fill="#6c3483"/>
+  <text x="800" y="848" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">天气屏  ESP32-S3-N16R8</text>
+  <text x="800" y="868" text-anchor="middle" font-size="11" fill="#d7bde2">weather_display.ino</text>
+  <text x="578" y="892" font-size="11" fill="#fff">ILI9341+字库: MOSI11 MISO13 SCK12 CS10 DC9 RST14 BLK21</text>
+  <text x="578" y="910" font-size="11" fill="#fff">字库芯片与液晶复用 CS10（高=字库 / 低=液晶）</text>
+  <text x="578" y="928" font-size="11" fill="#fff">BOOT 按键 → GPIO0</text>
+  <text x="578" y="946" font-size="11" fill="#fff">UART: TX19→主控RX　RX20←主控TX</text>
+  <text x="578" y="964" font-size="11" fill="#fff">WiFi: 收 4 路光照 UDP8266 + 拉取天气 API</text>
+  <text x="578" y="982" font-size="11" fill="#fff">备用热点 GymDisplay（192.168.4.1）</text>
+  <text x="578" y="1000" font-size="11" fill="#fff">供电 5V/3.3V，与主控共地</text>
+
+  <rect x="30" y="820" width="430" height="170" rx="10" fill="#6c3483"/>
+  <text x="245" y="848" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">光照节点  ESP32-C3 ×4</text>
+  <text x="245" y="868" text-anchor="middle" font-size="10" fill="#d7bde2">gy30_sender.ino · NODE_ID=1~4</text>
+  <text x="48" y="892" font-size="11" fill="#fff">GY-30 (BH1750) 光照模块：</text>
+  <text x="48" y="910" font-size="11" fill="#fff">SDA→GPIO8 · SCL→GPIO9 · VCC 3.3V · 0x23</text>
+  <text x="48" y="930" font-size="11" fill="#fff">UDP 广播 → 天气屏（端口 8266）</text>
+  <text x="48" y="950" font-size="11" fill="#fff">格式 LUX&lt;序号&gt;:数值</text>
+  <text x="48" y="970" font-size="10" fill="#d7bde2">四块板固件相同，仅 NODE_ID 不同</text>
+
+  <rect x="1140" y="820" width="430" height="170" rx="10" fill="#6c3483"/>
+  <text x="1355" y="848" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">温湿度节点  ESP32-C3</text>
+  <text x="1355" y="868" text-anchor="middle" font-size="10" fill="#d7bde2">dht11_sensor.ino</text>
+  <text x="1158" y="892" font-size="11" fill="#fff">DHT11: DATA→GPIO3</text>
+  <text x="1158" y="910" font-size="11" fill="#fff">OLED (SSD1315 0.96″): SDA→GPIO8 SCL→GPIO9</text>
+  <text x="1158" y="930" font-size="11" fill="#fff">OLED 地址 0x3C</text>
+  <text x="1158" y="950" font-size="11" fill="#fff">本地独立显示温湿度，不联网</text>
+  <text x="1158" y="970" font-size="10" fill="#d7bde2">DHT11 读数补偿：湿度-6 / 温度+6</text>
+
+  <!-- ==================== 连线：传感器 → 主控 ==================== -->
+  <line x1="460" y1="220" x2="560" y2="220" stroke="#27ae60" stroke-width="2"/>
+  <text x="510" y="212" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">GPIO4</text>
+  <line x1="460" y1="292" x2="560" y2="292" stroke="#27ae60" stroke-width="2"/>
+  <text x="510" y="284" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">GPIO18</text>
+  <line x1="460" y1="364" x2="560" y2="364" stroke="#e67e22" stroke-width="2"/>
+  <text x="510" y="356" text-anchor="middle" font-size="9" fill="#e67e22" font-style="italic">I2C</text>
+  <line x1="460" y1="436" x2="560" y2="436" stroke="#27ae60" stroke-width="2"/>
+  <text x="510" y="428" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">GPIO2</text>
+  <line x1="460" y1="508" x2="560" y2="508" stroke="#27ae60" stroke-width="2"/>
+  <text x="510" y="500" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">GPIO42</text>
+  <line x1="460" y1="580" x2="560" y2="580" stroke="#27ae60" stroke-width="2"/>
+  <text x="510" y="572" text-anchor="middle" font-size="9" fill="#27ae60" font-style="italic">SW1-4</text>
+
+  <!-- ==================== 连线：主控 → 执行器 ==================== -->
+  <line x1="1040" y1="219" x2="1140" y2="219" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="211" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO8</text>
+  <line x1="1040" y1="283" x2="1140" y2="283" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="275" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO21</text>
+  <line x1="1040" y1="347" x2="1140" y2="347" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="339" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO6</text>
+  <line x1="1040" y1="411" x2="1140" y2="411" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="403" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO9</text>
+  <line x1="1040" y1="475" x2="1140" y2="475" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="467" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO3/1</text>
+  <line x1="1040" y1="539" x2="1140" y2="539" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="531" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO7</text>
+  <line x1="1040" y1="603" x2="1140" y2="603" stroke="#2980b9" stroke-width="2"/>
+  <text x="1090" y="595" text-anchor="middle" font-size="9" fill="#2980b9" font-style="italic">GPIO10</text>
+  <line x1="1040" y1="667" x2="1140" y2="667" stroke="#e67e22" stroke-width="2"/>
+  <text x="1090" y="659" text-anchor="middle" font-size="9" fill="#e67e22" font-style="italic">CH4</text>
+  <line x1="1040" y1="731" x2="1140" y2="731" stroke="#e67e22" stroke-width="2"/>
+  <text x="1090" y="723" text-anchor="middle" font-size="9" fill="#e67e22" font-style="italic">CH5</text>
+
+  <!-- ==================== 连线：顶部 → 主控 ==================== -->
+  <line x1="675" y1="266" x2="675" y2="290" stroke="#8e44ad" stroke-width="2"/>
+  <text x="690" y="282" font-size="9" fill="#8e44ad" font-style="italic">SPI</text>
+  <line x1="925" y1="266" x2="925" y2="290" stroke="#e67e22" stroke-width="2"/>
+  <text x="940" y="282" font-size="9" fill="#e67e22" font-style="italic">I2C</text>
+
+  <!-- ==================== 连线：UART 主控 ↔ 天气屏 ==================== -->
+  <line x1="760" y1="580" x2="760" y2="820" stroke="#16a085" stroke-width="2"/>
+  <text x="772" y="700" font-size="10" fill="#16a085" font-style="italic">UART</text>
+  <text x="772" y="716" font-size="9" fill="#16a085">TX19/RX20</text>
+
+  <!-- ==================== 连线：UDP 光照节点 → 天气屏 ==================== -->
+  <line x1="460" y1="905" x2="560" y2="905" stroke="#95a5a6" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="510" y="897" text-anchor="middle" font-size="9" fill="#95a5a6" font-style="italic">UDP 8266</text>
+
+  <!-- ==================== 图例 ==================== -->
+  <g font-size="11">
+    <rect x="620" y="1072" width="16" height="16" rx="3" fill="#34495e"/>
+    <text x="642" y="1085" fill="#2c3e50">主控/从板</text>
+    <rect x="720" y="1072" width="16" height="16" rx="3" fill="#27ae60"/>
+    <text x="742" y="1085" fill="#2c3e50">传感器</text>
+    <rect x="800" y="1072" width="16" height="16" rx="3" fill="#2980b9"/>
+    <text x="822" y="1085" fill="#2c3e50">执行器</text>
+    <rect x="880" y="1072" width="16" height="16" rx="3" fill="#e67e22"/>
+    <text x="902" y="1085" fill="#2c3e50">I2C 器件</text>
+    <rect x="970" y="1072" width="16" height="16" rx="3" fill="#8e44ad"/>
+    <text x="992" y="1085" fill="#2c3e50">SPI 器件</text>
+    <rect x="1062" y="1072" width="16" height="16" rx="3" fill="#c0392b"/>
+    <text x="1084" y="1085" fill="#2c3e50">电源</text>
+  </g>
+
+  <!-- ==================== 注脚 ==================== -->
+  <text x="800" y="1112" text-anchor="middle" font-size="10" fill="#7f8c8d">注1：NPN 接近开关由 GPIO39 改接 GPIO42（GPIO39 带 SUB-SPI 复用不可靠）</text>
+  <text x="800" y="1132" text-anchor="middle" font-size="10" fill="#7f8c8d">注2：两块 S3 板 UART 交叉 —— 主控 TX(19)→天气屏 RX(20)，天气屏 TX(19)→主控 RX(20)；IBT-2 的 R_EN/L_EN 须接 5V 高电平，GND 须与 ESP32 共地</text>
+  <text x="800" y="1152" text-anchor="middle" font-size="10" fill="#7f8c8d">注3：导轨舵机为连续旋转舵机（500us=CCW / 1500us=停 / 2500us=CW）；风门/排粮为 MG90S 标准舵机，由 PCA9685 驱动</text>
+</svg>

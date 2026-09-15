@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "train_ppo.py", line 325, in <module>
+    ppo, history = train(total_steps=500_000, save_interval=10_000, log_interval=10_000)
+  File "train_ppo.py", line 261, in train
+    print(f"\n  \u26a0 早停: {steps_no_improve} 步无改善, 峰值 {best_reward:.2f}")
+  File "E:\anaconda\lib\site-packages\colorama\ansitowin32.py", line 40, in write
+    self.__convertor.write(text)
+  File "E:\anaconda\lib\site-packages\colorama\ansitowin32.py", line 141, in write
+    self.write_and_convert(text)
+  File "E:\anaconda\lib\site-packages\colorama\ansitowin32.py", line 169, in write_and_convert
+    self.write_plain_text(text, cursor, len(text))
+  File "E:\anaconda\lib\site-packages\colorama\ansitowin32.py", line 174, in write_plain_text
+    self.wrapped.write(text[start:end])
+UnicodeEncodeError: 'gbk' codec can't encode character '\u26a0' in position 4: illegal multibyte sequence

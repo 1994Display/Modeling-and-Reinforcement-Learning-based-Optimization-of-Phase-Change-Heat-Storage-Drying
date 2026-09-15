@@ -1,0 +1,49 @@
+============================================================
+干燥系统 PPO 训练
+v33: 3层MLP(128->128->128) + 噪声退火(sigma 0.22->0.05) + 极简奖励(仅干燥/能耗/安全), ~27K参数
+============================================================
+
+[1/3] 环境自检...
+  环境 OK, 动作空间: Box(0.0, 1.0, (4,), float32), 观测空间: Box(0.0, 1.0, (7,), float32)
+
+[2/3] 开始训练...
+Step   10000 | Avg Reward (last 10):  2853.27 | σ=0.2165 | Episodes: 16
+  → 保存最优模型 (avg reward: 2853.27)
+Step   20000 | Avg Reward (last 10):  3883.51 | σ=0.2101 | Episodes: 33
+  → 保存最优模型 (avg reward: 3883.51)
+Step   30000 | Avg Reward (last 10):  4346.95 | σ=0.2040 | Episodes: 50
+  → 保存最优模型 (avg reward: 4346.95)
+Step   40000 | Avg Reward (last 10):  5075.39 | σ=0.1979 | Episodes: 66
+  → 保存最优模型 (avg reward: 5075.39)
+Step   50000 | Avg Reward (last 10):  4917.50 | σ=0.1920 | Episodes: 83
+Step   60000 | Avg Reward (last 10):  4497.25 | σ=0.1864 | Episodes: 100
+Step   70000 | Avg Reward (last 10):  4529.61 | σ=0.1809 | Episodes: 116
+Step   80000 | Avg Reward (last 10):  5285.15 | σ=0.1755 | Episodes: 133
+  → 保存最优模型 (avg reward: 5285.15)
+Step   90000 | Avg Reward (last 10):  4883.65 | σ=0.1704 | Episodes: 150
+Step  100000 | Avg Reward (last 10):  5391.19 | σ=0.1653 | Episodes: 166
+  → 保存最优模型 (avg reward: 5391.19)
+Step  110000 | Avg Reward (last 10):  5591.12 | σ=0.1604 | Episodes: 183
+  → 保存最优模型 (avg reward: 5591.12)
+Step  120000 | Avg Reward (last 10):  5585.38 | σ=0.1557 | Episodes: 200
+Step  130000 | Avg Reward (last 10):  6280.58 | σ=0.1511 | Episodes: 216
+  → 保存最优模型 (avg reward: 6280.58)
+Step  140000 | Avg Reward (last 10):  6444.81 | σ=0.1466 | Episodes: 233
+  → 保存最优模型 (avg reward: 6444.81)
+Step  150000 | Avg Reward (last 10):  7173.85 | σ=0.1423 | Episodes: 250
+  → 保存最优模型 (avg reward: 7173.85)
+Step  160000 | Avg Reward (last 10):  6788.81 | σ=0.1381 | Episodes: 266
+Step  170000 | Avg Reward (last 10):  5915.17 | σ=0.1340 | Episodes: 283
+Step  180000 | Avg Reward (last 10):  4046.70 | σ=0.1301 | Episodes: 300
+Step  190000 | Avg Reward (last 10):  4435.34 | σ=0.1262 | Episodes: 316
+Step  200000 | Avg Reward (last 10):  5793.96 | σ=0.1225 | Episodes: 333
+Step  210000 | Avg Reward (last 10):  5464.47 | σ=0.1189 | Episodes: 350
+Step  220000 | Avg Reward (last 10):  6571.20 | σ=0.1153 | Episodes: 366
+Step  230000 | Avg Reward (last 10):  5029.32 | σ=0.1119 | Episodes: 383
+Step  240000 | Avg Reward (last 10):  5537.09 | σ=0.1086 | Episodes: 400
+Step  250000 | Avg Reward (last 10):  5922.32 | σ=0.1054 | Episodes: 416
+Step  260000 | Avg Reward (last 10):  6745.28 | σ=0.1023 | Episodes: 433
+Step  270000 | Avg Reward (last 10):  2865.10 | σ=0.0993 | Episodes: 464
+Step  280000 | Avg Reward (last 10):  3176.37 | σ=0.0963 | Episodes: 517
+Step  290000 | Avg Reward (last 10):  3087.53 | σ=0.0935 | Episodes: 566
+Step  300000 | Avg Reward (last 10):  3151.29 | σ=0.0907 | Episodes: 621

@@ -1,0 +1,4529 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+  <w:body>
+    <w:p w14:paraId="6F8F624A">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+      </w:pPr>
+      <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:bCs/>
+          <w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>2.4.1</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>代码模块解析（</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:bCs/>
+          <w:lang w:val="en-US" w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>共</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>13个模块）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="43967365">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.硬件抽象层（引脚定义+initHardware()）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6188F968">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>集中定义所有GPIO与执行器初始化，含BTS7960双路LEDCPWM、导轨开关上拉、PCA9685、BH1750、ESP32Servo直驱。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3AB11973">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.执行器控制层</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="2"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="0" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+        </w:tblBorders>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:tblLayout w:type="autofit"/>
+        <w:tblCellMar>
+          <w:top w:w="15" w:type="dxa"/>
+          <w:left w:w="15" w:type="dxa"/>
+          <w:bottom w:w="15" w:type="dxa"/>
+          <w:right w:w="15" w:type="dxa"/>
+        </w:tblCellMar>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="3129"/>
+        <w:gridCol w:w="2317"/>
+        <w:gridCol w:w="2890"/>
+      </w:tblGrid>
+      <w:tr w14:paraId="69F3AB10">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="532905C3">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>函数</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="3F1AD63A">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>对象</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="6F467883">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>方式</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="2153C76C">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="7C8232CB">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setMotorSpeed</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="1E1837D8">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>风机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="0B9AD079">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>LEDCPWM</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>(</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>0~255</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>)</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="7648DD4A">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="2206E3D8">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setPumpFlow</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="54CB52C8">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>水泵</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4A1528F8">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>LEDCPWM</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="1B99EEB4">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="749D22EF">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setServoAngle</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="497DF205">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>风门舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4526928B">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PCA9685CH4</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="7A9F5672">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="3CFDA0F6">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setOutputServoAngle</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="47CA24A4">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>排粮舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="3994F50F">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PCA9685CH5</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="1C4F81F1">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="16330583">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setHeater</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="3B64C59A">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>加热片</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="691EAE19">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>数字IO+未插管保护</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="39BED5AF">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="2683E3BB">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>setDCMotor</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="7F6F81CC">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>直流电机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3700" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="1A99F0A4">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>BTS7960双路PWM</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="5BABDBE3">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>每个执行器都有独立的安全保护（见亮点4）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="750D82B6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.传感器层</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6279EF58">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-readSensors(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：DHT11（干燥仓温湿度）+DS18B20（水箱温度）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="32A699CC">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-bh1750Init/Read(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：原生Wire手写BH1750驱动，不依赖外部库</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="17BEAF0A">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-parseUartLux(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：解析weather_display发来的LUX:v1;v2;v3;v4和WX</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>天气帧</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0D025DF2">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.状态估计层（虚拟传感器）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="23E10635">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-updateStateEstimate(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：用物理规律估算PCM温度、进出口风温等7维状态</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="38744582">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-pcmTempToEnthalpy(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：PCM焓值法（固相/潜热/液相三段），与Python仿真一致</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2F398FE6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>5.光照/集热模型</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3D4649D9">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-updateCollectorLight(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：综合环境光+4路集热器光照，确定</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;光照最弱者=放热集热器&#x201D;</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="24CF77D2">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-absorbingLight(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：取3台吸热集热器的最高光照</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="7D49058E">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-solarPowerW(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：光照→太阳能功率</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="737F6573">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>6.干燥周期模型（核心）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="57EDDAD4">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-updateDryModel(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：光照驱动的动态换位周期（见亮点1）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="29CFF6FD">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-computeDryRemainingTime(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：换位倒计时</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0770358C">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>7.AI推理层</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="614A8E21">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-initRLModel(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：加载TFLitePPO策略网络（PSRAM张量arena）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3FB6EB95">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-runAIInference(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：5维观测→5维动作（风机/风门/水泵/排粮/加热片）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5029DB5F">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-runAIDryModel(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：COLLECT干燥阶段的AI入口</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="748BCF8E">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-applyCollectorCycle(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：光照物理层对AI输出的统一修正（见亮点3）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="72CA5481">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>8.排粮状态机updateDischarge()</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="15E53369">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>湿度</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> &lt; 15</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>%</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> → 连续</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>稳定</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>10s → 排</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>粮90°×</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> 10s → 复位 → 冷却30s防</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>重触发。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2C7C598B">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>9.主状态机（loop()内collectSubState）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="06B3AACE">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>HOMING→READY→WAIT_LIGHT→MOTOR_GO→PIPES_INSERT→AUTO_DRY→DRY_HOMING→DRY_MOTOR→DRY_INSERT（闭环）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3A7F49E4">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>10.手动模式applyManualControls()+executeButton()</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4EBD19F7">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>6个触摸按钮，COLLECT手动操控与MANUAL模式复用，带完整互斥保护。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="7EFCDA25">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>11.显示层</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="28F5AF1F">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>drawFullScreen/drawHeader/drawSensorPanel/drawControlPanel/drawLightSensorPanel/drawCollectPanel/drawCollectManualPanel及对应的updateXxx增量刷新。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="7BB39605">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>12.触摸层</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="76E28877">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>handleTouch(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>（200ms去抖+15px移动过滤）、hitButton(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>、initButtons(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1415AA60">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>13.通信层</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3799E639">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>computeAdviceCode()+sendAdviceToDisplay(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>：生成12种干燥建议码通过UART回传天气屏。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="44DD52FA">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>---</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6F8542F0">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>二、代码亮点</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3815FA27">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.光照驱动的动态换位周期（物理建模）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="39A2E68C">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>以START时的参考光照为基准，周期=最短周期×</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>（</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>参考净功率/当前净功率</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>，光照减弱时等比延长，上限钳位。核心公式：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6051C4DE">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w14:paraId="74902A8E">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>p_net=太阳能功率-风机散热-自然损耗</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="47900952">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>周期=目标储热</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>（</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>0.6kJ)/净功率，钳位[20s,60s]</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="047960BF">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w14:paraId="07255EAC">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.舵机</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>压到→反转→松开→停止</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201D;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>防过头算法</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="098AA0C8">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>导轨舵机是连续旋转型、无角度反馈，靠边沿检测实现精确到位：前进压到限位开关→立即反转→开关松开→停止。四段式状态机避免过冲和误判。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3F83448F">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.分层控制架构（AI+物理模型融合）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="522A59A6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-AI决策风机/风门/水泵/加热片</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="050FA4EA">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-applyCollectorCycle(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>在AI之后做物理层修正：风机功率强制=光照匹配值，AI的风机输出被覆盖，其余由AI以</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;风机功率信号&#x201D;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>为条件反推</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="29E49193">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-排粮期间额外降速保护</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="62446BC0">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.贯穿全程的安全保护</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4A1D07F4">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>-直流电机：未回原点/舵机插入/移动中禁止启动</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4C30F503">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>－</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>加热片：未插管禁止+PCM≥90℃强制关</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="408BF231">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>－</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>模式切换：电机运行/舵机移动时禁止</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="794604C3">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>－</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>手动互斥：电机和舵机操作互斥</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="762D1308">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>5.参考光照基准设计</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6B625823">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>collectRefLightIntensity只在START时锁定，换位循环不更新，避免光照波动导致周期基准漂移——保证</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>最短干燥时间</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201D;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>的判定稳定。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="377CD0C5">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>6.传感器数据兜底</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="296AEBE9">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>集热器UART离线（-1）时，自动用环境光照兜底（0.7×集热器+0.3×环境，缺失则纯环境光），系统不因单点故障崩溃。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4056D0E6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>7.加热片滞回控制</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="52F32DE4">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>heaterAct≥0.50开、&lt;0.45关，中间死区防传感器噪声导致频繁启停。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="47A7EA0F">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>8.排粮的</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>连续稳定</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201D;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>判定</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4AAC6243">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>湿度达标后必须连续稳定10秒，任何反弹立即重置计时，且排粮后冷却30秒防误触发——比简单阈值判断更鲁棒。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="30D743B8">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>9.PCM焓值三段建模</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="7A6D8BF0">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>固相显热/相变潜热/液相显热分段计算，与pcm_balance_model.py仿真严格一致。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3339A276">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>10.增量UI刷新</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="75DF80D7">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>updateXxxDisplay(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>只刷变化区域，避免整屏重绘闪烁；显示值与实际下发值用同一变量，保证示数一致。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="61993099">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>---</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01CB29E7">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>三、硬件连接</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="24AD8A25">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>传感器</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="2"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="0" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+        </w:tblBorders>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:tblLayout w:type="autofit"/>
+        <w:tblCellMar>
+          <w:top w:w="15" w:type="dxa"/>
+          <w:left w:w="15" w:type="dxa"/>
+          <w:bottom w:w="15" w:type="dxa"/>
+          <w:right w:w="15" w:type="dxa"/>
+        </w:tblCellMar>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="3639"/>
+        <w:gridCol w:w="4697"/>
+      </w:tblGrid>
+      <w:tr w14:paraId="12DC5ABA">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="62CC8D63">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>器件</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="5804538F">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>引脚</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="4AFA8CD4">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="783DD93B">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>DHT11（干燥仓温湿度）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="01739AE5">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>VCC→3.3V,DATA→GPIO4</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="4C615300">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="6F2FC292">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>DS18B20（水箱温度）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="75145512">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>VCC→3.3V,DATA→GPIO18（4.7kΩ上拉）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="2EEADA2D">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="6122745C">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>BH1750（环境光照）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="40A15590">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>SDA→GPIO40,SCL→GPIO41</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>(</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>GY-30</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>)</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="5D3136A6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>执行器</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="2"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="0" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+        </w:tblBorders>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:tblLayout w:type="autofit"/>
+        <w:tblCellMar>
+          <w:top w:w="15" w:type="dxa"/>
+          <w:left w:w="15" w:type="dxa"/>
+          <w:bottom w:w="15" w:type="dxa"/>
+          <w:right w:w="15" w:type="dxa"/>
+        </w:tblCellMar>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="3839"/>
+        <w:gridCol w:w="4497"/>
+      </w:tblGrid>
+      <w:tr w14:paraId="11ACE8AF">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="651DF56E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>器件</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="3D397527">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>引脚</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="63CED5ED">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="21AB5200">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>风机（MOS）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="517DCDCE">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>SIG→GPIO8</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>(</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PWM</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>)</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="4CEFE514">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="57D409A2">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>水泵</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="34F3815E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>GPIO→GPIO6</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>(</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PWM</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>)</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="32C3CCD0">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="6B45D35C">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>加热片（MOS）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="51098814">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>IO→GPIO9（HIGH=加热）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="5EAE7558">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="6C2E3FC8">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>直流电机（BTS7960）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="7A19A44B">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>RPWM→GPIO3,LPWM→GPIO1</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="15C9FAAB">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="498B4C1A">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>进风导轨舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4C74DC6F">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>信号→GPIO7（直驱）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="10EA74DB">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="5ABCE41E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>出风导轨舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="7B8F145B">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>信号→GPIO10（直驱）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="1CA9A152">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="7B719A7E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>风门舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4619866E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PCA9685CH4</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="38DE7560">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4984E04C">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>排粮舵机</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="5550" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="242AD57E">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>PCA9685CH5</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="71DD2FBE">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>开关/通信</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="2"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="0" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+        </w:tblBorders>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:tblLayout w:type="autofit"/>
+        <w:tblCellMar>
+          <w:top w:w="15" w:type="dxa"/>
+          <w:left w:w="15" w:type="dxa"/>
+          <w:bottom w:w="15" w:type="dxa"/>
+          <w:right w:w="15" w:type="dxa"/>
+        </w:tblCellMar>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="3185"/>
+        <w:gridCol w:w="5151"/>
+      </w:tblGrid>
+      <w:tr w14:paraId="3CEAA38F">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="696331DB">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>器件</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="27DD9F17">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>引脚</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="6B51FF0A">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="01B30B9F">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>位置碰撞开关</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="516FA592">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>OUT→GPIO2</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="5E2B36D7">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="149BA91B">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>导轨开关SW1/2/3/4</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="4C42F3D4">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>GPIO38/37/47/48（出风原点/出风终点/进风终点/进风原点）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="353B92B6">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="1945DC39">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>UART</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>(</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>weather_display</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+                <w:lang w:eastAsia="zh-CN"/>
+              </w:rPr>
+              <w:t>)</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="12851E7C">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>RX→GPIO19,TX→GPIO20</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="68EE1E7E">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="358A506D">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>屏幕（ILI9341）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="19C684B5">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>CS5,DC16,RST17,MOSI11,SCLK12,MISO13</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w14:paraId="68020EE5">
+        <w:tblPrEx>
+          <w:tblBorders>
+            <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideH w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+            <w:insideV w:val="outset" w:color="auto" w:sz="6" w:space="0"/>
+          </w:tblBorders>
+          <w:tblCellMar>
+            <w:top w:w="15" w:type="dxa"/>
+            <w:left w:w="15" w:type="dxa"/>
+            <w:bottom w:w="15" w:type="dxa"/>
+            <w:right w:w="15" w:type="dxa"/>
+          </w:tblCellMar>
+        </w:tblPrEx>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4127" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="72232696">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>I2C总线</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6973" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:left w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:bottom w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+              <w:right w:val="single" w:color="auto" w:sz="6" w:space="0"/>
+            </w:tcBorders>
+            <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+            <w:vAlign w:val="top"/>
+          </w:tcPr>
+          <w:p w14:paraId="65552A8F">
+            <w:pPr>
+              <w:ind w:firstLine="420" w:firstLineChars="200"/>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+              </w:rPr>
+              <w:t>SDA=GPIO40,SCL=GPIO41（BH1750+PCA9685共用）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="77E35894">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>四、硬件特点</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0E54BD79">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.ESP32-S3主控：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>512KB SRAM</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>+</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>8MB PSRAM</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>，可承载TFLite推理（张量arena放PSRAM）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3FB50CB3">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.双舵机方案分工：导轨用ESP32Servo直驱（连续旋转、方向控制），风门/排粮用PCA9685板（角度定位），各司其职。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2F7C83FA">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.BTS7960大电流驱动（已从L298N升级）：43A半桥，带RPWM/LPWM双路PWM，支持低边刹车；需独立5VVCC+三地共地。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="32C56D5A">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.4路导轨限位开关（NC常闭，INPUT_PULLUP）：是</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201C;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>压到→反转→松开→停止</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&#x201D;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>精确定位的物理基础，也是回原点/插入的到位判据。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3C643486">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>5.跨板UART通信：与weather_display板互传4路集热器光照+天气数据+干燥建议码，构成分布式传感网络。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="242489B6">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>6.双I2C器件共线：BH1750与PCA9685共用一条I2C总线，节省GPIO。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0D3EE0D5">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>7.连续旋转舵机脉宽约定：500us=CCW、1500us=停止、2500us=CW，用writeMicroseconds直接</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>控制</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>方向。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10001">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>五、天气预报模块（weather_display.ino，ESP32-S3天气屏）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10002">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.联网获取：connect</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>Wi-Fi</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>采用</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>Wi-Fi</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> STA模式并关闭省电模式（WiFi.setSleep(false)）提高稳定性；天气源为itboy天气API（纯HTTP免Key，返回全中文）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10003">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.自动定位（三级降级）：locateByAmap(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>用高德IP定位，经rectangle中心点逆地理编码精确到区县；失败后用myip.ipip.net、cip.cc纯文本定位兜底；再失败回退默认城市唐山。内置50个城市+唐山11区县+成都14区县，每项带UTF-8名称、中国天气网代码、GBK字模字节和经纬度。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10004">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.小时级降水预报：fetchHourlyRain(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>通过Open-Meteo API拉取逐小时降水概率、天气代码和短波辐射，解析出今日有无雨、降雨起止小时、起始概率、实时天气实况和未来天气变化时刻。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10005">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.联网光照估算：fetchLocalLux(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>把Open-Meteo短波辐射按1W/m²≈120lux换算为当地光照，得到当前、下一小时和今日峰值光照。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10006">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>5.极简JSON解析器：jsonGetStr(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>手写字符串提取器，零依赖替代ArduinoJson，并处理转义字符。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10007">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>6.中文显示：GT24L24A2W16字库芯片按GBK编码偏移读取16×16、24×24汉字点阵，CS引脚复用（低电平选液晶、高电平选字库）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10008">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>7.NTP时间同步：syncTime(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>用阿里、腾讯、微软多服务器轮询，时间无效时30秒自动重试。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10009">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>六、C3无线传输模块（gy30_sender.ino，ESP32-C3光照节点）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000A">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.BH1750原生驱动：bh1750Init(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>写入Power ON和连续高分辨率模式指令，bh1750Read(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>读两字节原始值除以1.2得到lux。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000B">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>Wi-Fi</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>连接与诊断：连接前先射频扫描测试（WiFi.scanNetworks()）排除天线问题，onWifiDisconnected(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>事件回调捕获断开原因码，对202/15/200/17/21等常见原因码给出中文排查提示。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000C">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.UDP广播发送：每秒把LUX&lt;序号</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>&gt;</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>数值（如LUX1:1364）发到局域网广播地址端口8266，节点序号由NODE_ID区分，四个C3分别烧录1、2、3、4。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000D">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.健壮性设计：发射功率调小到8.5dBm提升贴热点连接稳定性、禁用</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>Wi-Fi</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>省电、断线后每10秒自动重连。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000E">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>5.接收端：天气屏checkLightUdp(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>解析LUX帧，按节点序号写入wirelessLux数组，超过10秒收不到判定离线（屏幕变红显示--）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E1000F">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>七、天气与无线传输的硬件连接与数据闭环</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10010">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>1.天气屏硬件：ESP32-S3-N16R8+2.8寸SPI TFT（带GT24L24A2W16字库芯片）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10011">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>2.C3节点硬件：ESP32-C3-SuperMini+GY-30（BH1750），SDA→GPIO8、SCL→GPIO9，VCC→3.3V。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10012">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>3.数据闭环：C3节点UDP广播光照（端口8266）→天气屏汇总后每2秒UART发LUX:v1;v2;v3;v4、天气更新时发WX</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>温度</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>；</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>湿度</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>；</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>天气码</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>；</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>降雨概率</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>；</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>降雨开始小时→控制器解析运行AI和集热模型→回传ADV</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>建议码→天气屏显示中文建议。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="01E10013">
+      <w:pPr>
+        <w:ind w:firstLine="420" w:firstLineChars="200"/>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>4.天气参与决策：computeAdviceCode(</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+          <w:lang w:eastAsia="zh-CN"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:eastAsia="宋体"/>
+        </w:rPr>
+        <w:t>中天气硬规则优先级最高——雨雪雷阵雨返回建议码7（提前收粮）、湿度≥85%返回码8（高湿抑制放热）、温度≥35℃返回码10（防暑）。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="62FFBE14"/>
+    <w:bookmarkEnd w:id="0"/>
+    <w:sectPr>
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+      <w:cols w:space="425" w:num="1"/>
+      <w:docGrid w:type="lines" w:linePitch="312" w:charSpace="0"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

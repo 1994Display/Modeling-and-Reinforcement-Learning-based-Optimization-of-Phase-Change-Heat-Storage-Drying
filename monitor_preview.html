@@ -1,0 +1,170 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>干燥系统远程监控 - 本地预览</title>
+<style>
+body{font-family:"SimHei","Microsoft YaHei",sans-serif;background:#ffffff;color:#333;margin:0;padding:14px;font-size:22px;font-weight:bold}
+h1{font-size:28px;color:#333;margin:0 0 12px;text-align:center}
+.card{background:#f4f6f9;border:1px solid #e0e3e8;border-radius:8px;padding:12px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;margin:3px 0}
+.label{color:#333;font-weight:normal}
+.value{font-weight:bold;font-size:22px}
+.remain{font-size:150px;font-weight:bold;color:#0d6efd;text-align:center;line-height:1.1}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.btn{background:#fff;color:#0d6efd;border:2px solid #0d6efd;padding:7px 0;border-radius:6px;font-size:22px;font-weight:bold}
+.btn:active{background:#0d6efd;color:#fff}
+.slider-cell{display:flex;flex-direction:column;gap:4px;background:#eef1f5;border-radius:6px;padding:8px}
+.slider-cell span{color:#333;font-size:22px;font-weight:normal}
+.slider-cell input{width:100%;height:26px}
+.slider-cell b{text-align:center;font-size:22px;font-weight:bold}
+.ok{color:#198754}.fault{color:#dc3545}
+</style></head><body>
+<h1>相变材料光热干燥远程监控</h1>
+<div class="card" style="text-align:center;height:300px;display:flex;flex-direction:column;justify-content:flex-start;padding:10px 12px">
+<div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:12px 0 6px">
+<span style="justify-self:start;white-space:nowrap"><span class="label" style="font-size:22px;font-weight:bold">实时光照</span><span class="value" id="mlux" style="font-size:28px">--</span></span>
+<div class="label" id="rtitle" style="font-size:28px;font-weight:bold">干燥剩余时间</div>
+<span></span>
+</div>
+<div style="flex:1;display:flex;align-items:center;justify-content:center">
+<div id="drysecBox" style="flex:1;text-align:center">
+<div class="label" style="font-size:28px;font-weight:bold">预计干燥时长</div>
+<div id="drysec" style="font-size:150px;font-weight:bold;color:#333;line-height:1.1">--</div>
+</div>
+<div style="flex:1">
+<div class="label" id="rlab" style="font-size:28px;font-weight:bold">剩余干燥时间</div>
+<div class="remain" id="remain">--</div>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:10px;margin-bottom:12px">
+<div class="card" style="flex:1;margin-bottom:0">
+<div class="row"><span class="label">故障</span><span class="value" id="wflt">--</span></div>
+<div class="row"><span class="label">控制器</span><span id="online">--</span></div>
+<div class="row"><span class="label">城市</span><span class="value" id="city">--</span></div>
+<div class="row"><span class="label">时间</span><span class="value" id="wtime">--</span></div>
+<div class="row"><span class="label">天气</span><span class="value" id="wea">--</span></div>
+<div class="row"><span class="label">干燥建议</span><span class="value" id="advice">--</span></div>
+</div>
+<div class="card" style="flex:1;margin-bottom:0">
+<div class="row"><span class="label">温度🌡️</span><span class="value"><span id="temp">--</span><span id="tmpT" style="color:#ff9800"></span></span></div>
+<div class="row"><span class="label">湿度💧</span><span class="value"><span id="hum">--</span><span id="humT" style="color:#0d6efd"></span></span></div>
+<div class="row"><span class="label">最高/最低</span><span class="value" style="white-space:nowrap"><span id="wtmax" style="color:#ff9800">--</span><span style="color:#ff9800">℃</span> / <span id="wtmin" style="color:#0d6efd">--</span><span style="color:#0d6efd">℃</span></span></div>
+<div class="row"><span class="label">天气变化</span><span class="value" id="wfc">--</span></div>
+<div class="row"><span class="label">明天天气</span><span class="value" id="wtmr">--</span></div>
+<div class="row"><span class="label">明天建议</span><span class="value" id="wtadv">--</span></div>
+</div>
+</div>
+<div style="display:flex;gap:10px;margin-bottom:12px">
+<div class="card" style="flex:1;margin-bottom:0"><div class="label" style="margin-bottom:6px;font-weight:bold">集热器光照 (lx)</div>
+<div class="grid" id="lux"></div>
+<div class="row"><span class="label">当前放热🔥</span><span class="value" id="dis">--</span></div>
+</div>
+<div class="card" style="flex:1;margin-bottom:0"><div class="label" style="margin-bottom:6px;font-weight:bold">元件工作情况</div>
+<div class="row"><span class="label">风机💨</span><span class="value" id="mfan">--</span></div>
+<div class="row"><span class="label">水泵💧</span><span class="value" id="mpump">--</span></div>
+<div class="row"><span class="label">电加热🔥</span><span class="value" id="mheater">--</span></div>
+<div class="row"><span class="label">风门⚙️</span><span class="value" id="mdamper">--</span></div>
+</div>
+</div>
+<div class="card"><div class="label" style="margin-bottom:6px">模式切换</div>
+<div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+<button class="btn" onclick="ctl('MODE=COLLECT')">COLLECT</button>
+<button class="btn" onclick="ctl('MODE=AUTO')">AUTO</button>
+<button class="btn" onclick="ctl('MODE=MANUAL')">MANUAL</button>
+</div></div>
+<div class="card"><div class="label" style="margin-bottom:6px">COLLECT 流程（电机/导轨需先点手动模式）</div>
+<div class="grid">
+<button class="btn" onclick="ctl('START')">流程启动</button>
+<button class="btn" onclick="ctl('STOP')">流程停止</button>
+</div>
+<div style="margin-top:6px;background:#eef1f5;border:2px solid #b9c1cb;border-radius:6px;padding:8px">
+<div style="text-align:center;margin-bottom:6px"><button class="btn" style="width:55%;padding:7px 0" onclick="ctl('MANUAL')">手动模式</button></div>
+<div class="grid">
+<button class="btn" onclick="ctl('INSERT')">导轨插入</button>
+<button class="btn" onclick="ctl('LEAVE')">导轨离开</button>
+<button class="btn" onclick="ctl('MOTOR=1')">电机启动</button>
+<button class="btn" onclick="ctl('MOTOR=0')">电机停止</button>
+</div>
+</div></div>
+<div class="card"><div class="label" style="margin-bottom:6px">干燥元件操控（仅 MANUAL 模式）</div>
+<div class="slider-cell"><span>风机</span><input id="fanSld" type="range" min="0" max="100" step="5" value="0" oninput="this.nextElementSibling.textContent=this.value+'%'" onchange="ctl('FAN='+this.value)"><b id="fanVal">0%</b></div>
+<div class="slider-cell" style="margin-top:6px"><span>水泵</span><input id="pumpSld" type="range" min="0" max="100" step="5" value="0" oninput="this.nextElementSibling.textContent=this.value+'%'" onchange="ctl('PUMP='+this.value)"><b id="pumpVal">0%</b></div>
+<div class="slider-cell" style="margin-top:6px"><span>风门</span><input id="damperSld" type="range" min="0" max="90" step="1" value="0" oninput="this.nextElementSibling.textContent=this.value+'°'" onchange="ctl('DAMPER='+this.value)"><b id="damperVal">0°</b></div>
+<div class="grid" style="margin-top:6px">
+<button class="btn" onclick="ctl('HEATER=1')">电加热 开</button>
+<button class="btn" onclick="ctl('HEATER=0')">电加热 关</button>
+</div></div>
+<script>
+function ctl(cmd){
+  if (location.protocol === 'file:') { alert('本地预览：将发送 ' + cmd); }
+  else { fetch('/ctl?cmd='+cmd); }
+}
+function emojiOf(s){
+  if(!s)return '';
+  if(s.indexOf('雷')>=0)return '⛈️ ';
+  if(s.indexOf('雪')>=0)return '❄️ ';
+  if(s.indexOf('雨')>=0)return '🌧️ ';
+  if(s.indexOf('雾')>=0||s.indexOf('霾')>=0)return '🌫️ ';
+  if(s.indexOf('晴')>=0)return '☀️ ';
+  if(s.indexOf('云')>=0)return '⛅ ';
+  if(s.indexOf('阴')>=0)return '☁️ ';
+  return '';
+}
+function adviceText(c){
+  var m={0:'加载中',1:'光照充足正常干燥',2:'风机加大加速放热',3:'风门开启辅助散热',4:'水泵开启储热循环',5:'加热开启补热干燥',6:'排粮开启适时出料',7:'降雨预报提前收粮',8:'高湿环境抑制放热',9:'光照不足减缓干燥',10:'温度过高注意防暑',11:'系统正常保持运行'};
+  return m[c]||('建议'+c);
+}
+function render(d){
+  var stageText={0:'回原点',1:'就绪',2:'等待光照',3:'转盘定位',4:'气管插入',5:'干燥中',6:'导轨回位',7:'转盘换位',8:'导轨插入'};
+  var r=document.getElementById('remain'),rt=document.getElementById('rtitle');
+  var db=document.getElementById('drysecBox'),rl=document.getElementById('rlab');
+  if(d.remain>=0){rt.textContent='⏱️ 干燥时间';r.textContent=d.remain.toFixed(0)+' s';r.style.fontSize='150px';r.style.color='#333';db.style.display='block';rl.style.display='block';document.getElementById('drysec').textContent=(d.drysec!=null&&d.drysec>=0)?d.drysec.toFixed(0)+' s':'--';}
+  else if(d.stage!=null&&d.stage>=0){rt.textContent='⏳ 当前阶段';r.textContent=stageText[d.stage]||'--';r.style.fontSize='150px';r.style.color=(d.stage===1)?'#198754':'#0d6efd';db.style.display='none';rl.style.display='none';}
+  else{rt.textContent='⏱️ 干燥时间';r.textContent='--';r.style.fontSize='150px';r.style.color='#333';db.style.display='none';rl.style.display='none';}
+  var o=document.getElementById('online');
+  o.textContent = d.online?'✓ 在线':'✗ 离线'; o.className = d.online?'ok':'fault';
+  document.getElementById('city').textContent = d.city;
+  document.getElementById('wea').textContent = emojiOf(d.wea)+(d.wea||'')+(d.todayAdvice?('，'+d.todayAdvice):'');
+  document.getElementById('temp').textContent = d.temp+'°C';
+  document.getElementById('tmpT').textContent = d.tmpTrend===1?' ↑':(d.tmpTrend===-1?' ↓':'');
+  document.getElementById('hum').textContent = d.hum+'%';
+  document.getElementById('humT').textContent = d.humTrend===1?' ↑':(d.humTrend===-1?' ↓':'');
+  var av=d.advice;
+  document.getElementById('advice').textContent = (av!=null&&av!=='null'&&av!=='')?adviceText(av):'--';
+  document.getElementById('wtime').textContent = d.time||'--';
+  document.getElementById('wtmax').textContent = '🔺'+(d.tmax!=null?d.tmax:'--');
+  document.getElementById('wtmin').textContent = '🔻'+(d.tmin!=null?d.tmin:'--');
+  var lt=(d.luxTrend===1)?' 光照↑':((d.luxTrend===-1)?' 光照↓':'');
+  document.getElementById('wfc').textContent = (d.fcWea&&d.fcHour!=null&&d.fcHour>=0)?d.fcHour+'小时后转'+emojiOf(d.fcWea)+d.fcWea+lt:'--';
+  document.getElementById('wtmr').textContent = d.tmrWea?(emojiOf(d.tmrWea)+d.tmrWea+(d.tmrTmax!=null?' '+d.tmrTmax+'°/'+d.tmrTmin+'°':'')):'--';
+  document.getElementById('wtadv').textContent = d.tmrAdvice||'--';
+  var wf=document.getElementById('wflt');
+  if(d.fault!=null&&d.fault>=0){wf.textContent=d.fault?'⚠️ 故障':'✓ 正常';wf.style.color=d.fault?'#dc3545':'#198754';}
+  else{wf.textContent='--';wf.style.color='';}
+  document.getElementById('dis').textContent = d.dis>0?d.dis+' 号':'--';
+  document.getElementById('mlux').textContent = (d.light!=null&&d.light>=0)?'☀️ '+d.light+' lx':'--';
+  var l='';for(var i=0;i<4;i++)l+='<div><span style="font-weight:normal">集热器'+(i+1)+'☀️:</span> '+d.lux[i]+'</div>';
+  document.getElementById('lux').innerHTML=l;
+  document.getElementById('mfan').textContent = d.fan!=null?d.fan+'%':'--';
+  document.getElementById('mpump').textContent = d.pump!=null?d.pump+'%':'--';
+  document.getElementById('mheater').textContent = d.heater!=null?(d.heater?'开':'关'):'--';
+  document.getElementById('mdamper').textContent = d.damper!=null?d.damper+'°':'--';
+  if(d.mode!=null&&d.mode!==2){
+    var fs=document.getElementById('fanSld'),ps=document.getElementById('pumpSld'),ds=document.getElementById('damperSld');
+    fs.value=0;document.getElementById('fanVal').textContent='0%';
+    ps.value=0;document.getElementById('pumpVal').textContent='0%';
+    ds.value=0;document.getElementById('damperVal').textContent='0°';
+  }
+}
+function renderMock(){
+  render({ remain: 22, online: true, wea: '多云', drysec: 120,
+           temp: 33, hum: 64, advice: '风机加大加速放热', dis: 3, city: '成都郫都区', todayAdvice: '适宜太阳能干燥',
+           lux: [913, 856, 914, 799],
+           fan: 60, pump: 0, heater: 1, damper: 45, stage: 2, mode: 2, light: 812, advice: 2,
+           time: '2026-08-23，17:23，周日', tmax: 30, tmin: 22, fcHour: 4, fcWea: '多云',
+           tmrWea: '晴', tmrTmax: 31, tmrTmin: 24, tmrAdvice: '适宜太阳能干燥', fault: 0,
+           tmpTrend: 1, humTrend: -1, luxTrend: -1 });
+}
+function upd(){ fetch('/data').then(r=>r.json()).then(render).catch(renderMock); }
+setInterval(upd,1000); upd();
+</script></body></html>
